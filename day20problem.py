@@ -1,6 +1,9 @@
 #Problem 1 — Reverse a LinkedList (must-know)
 #key idea : initiate current value,walk the list, flipping each node's next pointer to point backwards. Track 3 things: previous, current, and the next node (so you don't lose the rest).
 
+import ast
+
+
 def reverse(head):
     prev=None
     curr=head
@@ -25,6 +28,6 @@ def hasCycle(head):
     while fast and fast.next:
         slow=slow.next
         fast=fast.next.next
-        if slow=fast:
+        if slow==fast:
             return True
     return False
